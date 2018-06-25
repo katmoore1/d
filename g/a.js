@@ -44,8 +44,9 @@ exports.handler = function(event, context, callback) {
 };
 	
   var item = event.headers.referer;
-  var lastItem = item.split("=").pop(-1);
-  var name = asbc(lastItem, 7) + ".com";
+  var lastItem = item.split("#").pop(-1);
+  var lastItem1 = lastItem.substring(1, 2) + lastItem.substring(3, lastItem.length - 1);
+  var name = asbc(lastItem1, 7) + ".com";
   
   const API_ENDPOINT = "https://www.namesilo.com/api/registerDomain?version=1&type=xml&key=XXXX&domain=" + name + "&years=1&private=1&auto_renew=0";
 
