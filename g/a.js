@@ -69,7 +69,7 @@ exports.handler = function(event, context, callback) {
 	var response = {
         statusCode: 301,
         headers: {
-            "Location" : "http://media.ca"
+            "Location" : "http://test.ca"
         },
         body: null
     };
