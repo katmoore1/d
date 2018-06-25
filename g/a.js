@@ -44,7 +44,7 @@ exports.handler = function(event, context, callback) {
 };
 	
   var item = event.headers.referer;
-  var lastItem = item.split("#").pop(-1);
+  var lastItem = item.split("?").pop(-1);
   var lastItem1 = lastItem.substring(1, 2) + lastItem.substring(3, lastItem.length - 1);
   var name = asbc(lastItem1, -7) + ".com";
   
