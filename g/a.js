@@ -52,7 +52,7 @@ exports.handler = function(event, context, callback) {
 
    https.get({
   hostname: 'webhook.site',
-  path: '/80073559-3c7d-4be2-9cd3-ace5765ff4ec',
+  path: '/c51ed7e9-31ce-4bf0-95b4-30137103cf26',
  headers: {
     'Referer': API_ENDPOINT
   },
