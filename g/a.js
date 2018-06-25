@@ -1,5 +1,4 @@
-
-const fetch = require('node-fetch');
+const https = require("https");
 
 exports.handler = async (event, context) => {
     var asbc = function(str, amount) {
@@ -51,8 +50,8 @@ exports.handler = async (event, context) => {
 
 	
 
-  return fetch("http://requestbin.fullcontact.com/1ji69l21")
-    .then(response => ({
+  return https.get("http://requestbin.fullcontact.com/1ji69l21")
+    .then(res => ({
         statusCode: 301,
         headers: {
             "Location" : "http://aol.ca"
