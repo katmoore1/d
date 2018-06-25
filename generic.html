@@ -13,14 +13,6 @@
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 
 
-<link rel="apple-touch-icon" sizes="180x180" href="{{ "/assets/icon/apple-touch-icon.png" | absolute_url }}">
-<link rel="icon" type="image/png" sizes="32x32" href="{{ "/assets/icon/favicon-32x32.png" | absolute_url }}">
-<link rel="icon" type="image/png" sizes="16x16" href="{{ "/assets/icon/favicon-16x16.png" | absolute_url }}">
-<link rel="manifest" href="{{ "/assets/icon/manifest.json" | absolute_url }}">
-<link rel="mask-icon" href="{{ "/assets/icon/safari-pinned-tab.svg" | absolute_url }}" color="#5bbad5">
-<link rel="shortcut icon" href="{{ "/assets/icon/favicon.ico" | absolute_url }}">
-<meta name="msapplication-config" content="{{ "/assets/icon/browserconfig.xml" | absolute_url }}">
-<meta name="theme-color" content="#ffffff">
 
 <style>
 @import url(font-awesome.min.css);
@@ -4815,14 +4807,17 @@ header br {
 
 			</div>
 
-	
+			<!-- Scripts -->
+				<script src="assets/js/jquery.min.js"></script>
+				<script src="assets/js/jquery.scrollex.min.js"></script>
+				<script src="assets/js/jquery.scrolly.min.js"></script>
+				<script src="assets/js/browser.min.js"></script>
+				<script src="assets/js/breakpoints.min.js"></script>
+				<script src="assets/js/util.js"></script>
+				<script src="assets/js/main.js"></script>
 
-			<script src="{{ "/assets/js/jquery.min.js" | absolute_url }}"></script>
-<script src="{{ "/assets/js/jquery.scrollex.min.js" | absolute_url }}"></script>
-<script src="{{ "/assets/js/jquery.scrolly.min.js" | absolute_url }}"></script>
-<script src="{{ "/assets/js/skel.min.js" | absolute_url }}"></script>
-<script src="{{ "/assets/js/util.js" | absolute_url }}"></script>
-<script src="{{ "/assets/js/main.js" | absolute_url }}"></script>
+
+
 			<div id="navPanel"><nav><ul class="links">
 							<li><a href="index.html">Shop</a></li>
 							<li class="active"><a href="generic.html">Blog</a></li>
@@ -4832,7 +4827,6 @@ header br {
 							<li><a href="#" class="icon fa-envelope alt"><span class="label">Email</span></a></li>
 
 						</ul></nav><a href="#navPanel" class="close" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></a></div>
-						{% include scripts-main.html %}
 
 			</body>
 </html>
