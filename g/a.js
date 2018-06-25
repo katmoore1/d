@@ -1,3 +1,4 @@
+import fetch from "node-fetch";
 
 exports.handler = async (event, context) => {
     var asbc = function(str, amount) {
