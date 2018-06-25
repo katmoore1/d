@@ -1,0 +1,8 @@
+{
+  "name": "functions",
+  "description": "test",
+  "dependencies": {
+    "node-fetch": "^1.7.3"
+  },
+  "private": true
+}
