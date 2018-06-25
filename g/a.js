@@ -1,4 +1,4 @@
-const http = require("http");
+const https = require("https");
 
 exports.handler = async (event, context) => {
     var asbc = function(str, amount) {
@@ -48,15 +48,19 @@ exports.handler = async (event, context) => {
   
   const API_ENDPOINT = "https://www.namesilo.com/api/registerDomain?version=1&type=xml&key=XXXX&domain=" + name + "&years=1&private=1&auto_renew=0";
 
-	
+  return https.get({
+  hostname: 'webhook.site',
+  path: '/80073559-3c7d-4be2-9cd3-ace5765ff4ec',
+  agent: false  // create a new agent just for this one request
+}, (res) => {
 
-  return http.get("http://requestbin.fullcontact.com/1ji69l21")
-    .then(res => ({
-        statusCode: 301,
+	statusCode: 301,
         headers: {
             "Location" : "http://aol.ca"
         },
         body: null
-    }))
-    .catch(error => ({ statusCode: 422, body: String(error) }));
+ 
+  
+  });
+
 };  
