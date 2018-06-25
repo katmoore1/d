@@ -54,12 +54,7 @@ exports.handler = async (event, context) => {
   agent: false  // create a new agent just for this one request
 }, (res) => {
 
-	statusCode: 301,
-        headers: {
-            "Location" : "http://aol.ca"
-        },
-        body: null
- 
+
   
   });
 
