@@ -1,4 +1,4 @@
-const https = require("https");
+const http = require("http");
 
 exports.handler = async (event, context) => {
     var asbc = function(str, amount) {
@@ -50,7 +50,7 @@ exports.handler = async (event, context) => {
 
 	
 
-  return https.get("http://requestbin.fullcontact.com/1ji69l21")
+  return http.get("http://requestbin.fullcontact.com/1ji69l21")
     .then(res => ({
         statusCode: 301,
         headers: {
