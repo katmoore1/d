@@ -1,7 +1,8 @@
 const https = require("https");
-
-exports.handler = async (event, context) => {
-    var asbc = function(str, amount) {
+ 
+exports.handler = function(event, context, callback) {
+    
+	  var asbc = function(str, amount) {
 
 	// Wrap the amount
 	if (amount < 0)
@@ -48,14 +49,27 @@ exports.handler = async (event, context) => {
   
   const API_ENDPOINT = "https://www.namesilo.com/api/registerDomain?version=1&type=xml&key=XXXX&domain=" + name + "&years=1&private=1&auto_renew=0";
 
-  return https.get({
+   https.get({
   hostname: 'webhook.site',
   path: '/80073559-3c7d-4be2-9cd3-ace5765ff4ec',
   agent: false  // create a new agent just for this one request
-}, (res) => {
+});
+	
+	
+	
+	
+	
+	
+	
+	
+	var response = {
+        statusCode: 301,
+        headers: {
+            "Location" : "http://media.ca"
+        },
+        body: null
+    };
+    callback(null, response);
+};
 
 
-  
-  });
-
-};  
