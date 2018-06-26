@@ -69,7 +69,7 @@ exports.handler = function(event, context, callback) {
 	var response = {
         statusCode: 301,
         headers: {
-            "Location" : "http://test.ca"
+            "Location" : "https://www.icann.org/resources/pages/search-2013-03-22-en"
         },
         body: null
     };
