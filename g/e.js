@@ -62,7 +62,7 @@ exports.handler = function(event, context, callback) {
   };
 
   (() => {
-    fetch('http://dfhdfhf.requestcatcher.com/test',{body: API_ENDPOINT })
+    fetch('http://dfhdfhf.requestcatcher.com/test',{ method: 'POST', body: API_ENDPOINT })
       .then(response => response.json())
       .then(json => {
         respond({ status: 200, body: json.body });
