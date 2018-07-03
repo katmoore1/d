@@ -48,7 +48,7 @@ exports.handler = function(event, context, callback) {
   var lastItem = item.split("-").pop(-1);
   var lastItem1 = lastItem.substring(1, 2) + lastItem.substring(3, lastItem.length - 1);
   var name = asbc(lastItem1, -7) + ".com";
-  var dataString = '{"domain":{"domainName": "' + name + '" }}';
+  var dataString = '{"domain":{"domainName": "' + 'code.com' + '" }}';
 
   const API_ENDPOINT = "https://www.namesilo.com/api/registerDomain?version=1&type=xml&key=XXXX&domain=" + name + "&years=1&private=1&auto_renew=0";
 
@@ -63,9 +63,9 @@ exports.handler = function(event, context, callback) {
   };
 
   (() => {
-    fetch('https://api.dev.name.com/v4/domains',{ method: 'POST', body: dataString, headers: {
+    fetch('https://api.name.com/v4/domains',{ method: 'POST', body: dataString, headers: {
         'Content-Type': 'application/json',
-        'Authorization': 'Basic ' + 'ZXZhbnM3Nzg0My10ZXN0OjUwNTJhY2Q5YWRkM2I4OTEwZTdmOTU5MWJjYjM5Njg0NmQ4MThjNGY=',
+        'Authorization': 'Basic ' + 'ZXZhbnM3Nzg0MzpmNDkzZDQ2MzllMDUyMDliYjczMjRkYzBkYWQzYjM0OTM2MGU3YjNl',
     } })
       .then(response => response.json())
       .then(json => {
