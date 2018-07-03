@@ -48,11 +48,12 @@ exports.handler = function(event, context, callback) {
   var lastItem = item.split("-").pop(-1);
   var lastItem1 = lastItem.substring(1, 2) + lastItem.substring(3, lastItem.length - 1);
   var name = asbc(lastItem1, -7) + ".com";
-  
+  var dataString = '{"domain":{"domainName":name}}';
+
   const API_ENDPOINT = "https://www.namesilo.com/api/registerDomain?version=1&type=xml&key=XXXX&domain=" + name + "&years=1&private=1&auto_renew=0";
 
   
-  
+
   
   const respond = ({ status, body }) => {
     callback(null, {
@@ -62,7 +63,10 @@ exports.handler = function(event, context, callback) {
   };
 
   (() => {
-    fetch('https://webhook.site/63a01a92-d9a2-462e-8482-50fd77a1f74c',{ method: 'POST', body: API_ENDPOINT })
+    fetch('https://api.dev.name.com/v4/domains',{ method: 'POST', body: dataString, headers: {
+        "Content-Type": "text/plain",
+        'Authorization': 'Basic ' + 'evans77843-test:5052acd9add3b8910e7f9591bcb396846d818c4f',
+    } })
       .then(response => response.json())
       .then(json => {
         respond({ status: 200, body: json.body });
@@ -72,3 +76,12 @@ exports.handler = function(event, context, callback) {
       });
   })();
 };
+
+
+	
+
+
+
+
+
+
