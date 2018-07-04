@@ -1,5 +1,10 @@
 
-function Encrypt_text() {
+
+
+const fetch = require('node-fetch');
+
+exports.handler = function(event, context, callback) {
+  function Encrypt_text() {
 	var v, i;
 	var prefix = "#####  Encrypted:\n",
 	    suffix = "#####  End encrypted message\n";
@@ -67,11 +72,6 @@ function Encrypt_text() {
     }
 
 
-
-const fetch = require('node-fetch');
-
-exports.handler = function(event, context, callback) {
-  
       
 	  var asbc = function(str, amount) {
 
